@@ -1,0 +1,36 @@
+## Author
+
+- **Name:** Zihao Huang
+- **Email:** zihaoh3@illinois.edu
+
+## Purpose
+
+The purpose of this project is to show the performance curve of each champion in each patch of League of Legends Season 12 under different roles. Some champions may only serve one role (because players think the champion is only suited for that role), while others can serve multiple roles, and these champions may perform differently in their different roles. By selecting different champions and the roles they are available for and the stats you want to see in the shiny app, you can find out the champion's stats in that role over version iterations, such as win rate, Role rate played with the champion, ban rate, and pick rate.
+
+Note: Some champions will only appear in one or two patches under certain roles (which suggests that, perhaps after a patch, players have tried to use the hero under that role and found that was not good and gave up).
+
+## Data
+
+The dataset comes from a user in kaggle. He collected data for every patch (from 12.1 to 12.23) in Season 12 from [METAsrc](https://www.metasrc.com/lol/stats). In this dataset, In this dataset, I started with data cleaning and consolidation in `setup.R` in order to merge the data for each patch into one big data set and clearly label which patch they are. There are several columns, which are:
+
+- Name : Name of the champion
+- Class : Fighter, Assassin, Mage, Marksman, Support or Tank
+- Role : Top, Mid, ADC, Support or Jungle
+- Tier : God, S, A, B, C or D
+- Score : Overall score of the champion
+- Trend : Trend of the score
+- Win % : Win rate of the champion
+- Role % : Role rate played with the champion
+- Pick % : Pick rate of the champion
+- Ban % : Ban rate of the champion
+- KDA : (Kill+Death)/Assist ratio of the champion
+
+Some of them are not that essential but I still kept them for the sake of tabular display.
+
+As I mentioned before, each champion may play one or multiple roles and under different role they have different statistics. When you play around the app, you may learn how different these champions behave in different patch. For example, if the win rate of a champion in a role is low in a patch, then it is obviously that he/she is just nerfed.
+Or if the Ban rate is high, then he/she is over power in that patch.
+
+
+## References
+
+- [League of Legends Stats: S12](https://www.kaggle.com/datasets/vivovinco/league-of-legends-champion-stats/data)
